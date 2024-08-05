@@ -1,0 +1,159 @@
+
+:root {
+    --b-gap: 54px;
+
+    --bg-dark: #0F2843;
+    --bg-secondary: rgba(250, 251, 252, 1);
+
+    --cl-text: rgba(14, 44, 86, 1);
+    --cl-blue: rgba(29, 141, 251, 1);
+    --cl-green: rgba(98, 179, 103, 1);
+    --cl-gray: rgba(184, 191, 199, 1);
+    --cl-red: rgba(255, 61, 61, 1);
+    --cl-yellow:rgba(227, 185, 19, 1);
+
+    --cl-border: rgba(223, 228, 234, 1);
+
+    --cl-section-yellow: #fff8f2;
+    --cl-section-yellow-bc: #ffc193;
+    --cl-section-yellow-bc-inside: #ffa25d;
+
+    --index-header: 100;
+
+    --conatiner-max: 1258px;
+    --container-indent: 24px;
+
+}
+
+.cl-green {
+    color: var(--cl-green)!important;
+}
+
+.cl-red {
+    color: var(--cl-red)!important;
+}
+
+.cl-yellow {
+    color: var(--cl-yellow)!important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+h1,h2,h3 {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+    span {
+        font-weight: 300;
+    }
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+b {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+[href] {
+    color: currentColor;
+    text-decoration: none;
+}
+
+html, body {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    color: var(--cl-text)
+}
+
+html.ovhidden ,
+html.ovhidden body {
+    height: 100vh;
+    height: -webkit-fill-available;
+    overflow: hidden!important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.ovhidden {
+    overflow: hidden!important;
+}
+
+.ellipsis {
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.app-wrapper {
+    min-width: 580px;
+}
+
+.app-desktop-visible {
+    @include mq-max(md) {
+        display: none!important;
+    }
+}
+
+.app-mobile-visible {
+    @include mq-min(md) {
+        display: none!important;
+    }
+}
+
+.app-container {
+    max-width: calc(var(--conatiner-max) + var(--container-indent) * 2);
+    padding-left: var(--container-indent);
+    padding-right: var(--container-indent);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    main {
+        flex: 1;
+        min-height: 0;
+    }
+}

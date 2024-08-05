@@ -1,0 +1,1 @@
+styles copied from origin https://invest-idei.ru/

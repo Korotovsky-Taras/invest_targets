@@ -1,0 +1,131 @@
+[class*=app-button-] {
+    font-size: 10px;
+    line-height: 38px;
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 3px
+}
+
+.btn, [class*=app-button-] {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+[class*=app-button-].-full {
+    width: 100%
+}
+
+[class*=app-button-]>a,[class*=app-button-]>span {
+    left: -20px;
+    width: calc(100% + 40px);
+    vertical-align: top;
+    display: inline-block;
+    position: relative
+}
+
+[class*=app-button-].-tall {
+    font-size: 14px;
+    line-height: 60px;
+    height: 60px
+}
+
+[class*=app-button-]>span>[class*=icon-].-left {
+    margin-right: 8px
+}
+
+[class*=app-button-]>span>[class*=icon-].-right {
+    margin-left: 8px
+}
+
+.app-button-white {
+    border-color: #dbdde3
+}
+
+.app-button-white:hover {
+    background: #F5F9FF;
+    color: #0f2943
+}
+
+.app-button-disabled {
+    cursor: default
+}
+
+.app-button-green {
+    color: #fff;
+    border-color: #4ac420;
+    background-color: #4ac421
+}
+
+.app-button-green:hover {
+    color: #fff;
+    background: #2BAB00
+}
+
+.app-button-green-border {
+    color: #4ac421;
+    border-color: #4ac421;
+    background-color: #fff
+}
+
+.app-button-green-border:hover {
+    color: #4ac421
+}
+
+.app-button-red {
+    color: #fff;
+    border-color: #ff3d3d;
+    background-color: #ff3d3d
+}
+
+.app-button-red:hover {
+    color: #fff;
+    border-color: #e63a3a;
+    background-color: #e73d3d
+}
+
+.app-button-invest {
+    color: #0f2943;
+    border-color: #ffd160;
+    background-color: #ffd160
+}
+
+.app-button-invest:hover {
+    color: #0f2943;
+    border-color: #ffdc7d;
+    background-color: #ffdc7d
+}
+
+.app-button-invest:active {
+    border-color: #ffb14c;
+    background-color: #ffb14c
+}
+
+.app-button-invest>a {
+    color: #0f2943!important
+}
+
+.app-button-blue {
+    color: #fff;
+    border-color: #29c8ff;
+    background-color: #29c8ff
+}
+
+.app-button-blue:hover {
+    color: #fff;
+    border-color: #28afe5;
+    background-color: #27b2e7
+}
+
+.app-button-text-normal {
+    font-size: 13px;
+    text-transform: initial;
+}
