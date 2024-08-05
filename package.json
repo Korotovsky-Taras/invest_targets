@@ -1,8 +1,8 @@
 {
-  "name": "markformele",
+  "name": "invest_targets",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://korotovsky-taras.github.io/evento",
+  "homepage": "https://korotovsky-taras.github.io/invest_targets",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
