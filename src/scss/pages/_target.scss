@@ -213,16 +213,59 @@
 }
 
 
+.app-target-forecast__acw {
+    position: relative;
+
+    ~ .app-target-forecast__acw {
+        margin-top: 4px;
+    }
+
+    .--idea-corner {
+        pointer-events: none;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        overflow: hidden;
+        border-bottom-right-radius: 6px;
+    }
+
+    .--idea-corner-link {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: white;
+        transform: rotate(45deg) translateX(25px);
+        border: 1px solid var(--cl-border);
+        pointer-events: all;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:hover {
+            background: var(--bg-secondary);
+        }
+
+        svg {
+            position: absolute;
+            margin-left: 5px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
 .app-target-forecast__anal-card {
     border: 1px solid var(--cl-border);
     padding-top: 24px;
     padding-bottom: 24px;
     align-items: center;
-    position: relative;
 
     &:hover {
         background: var(--bg-secondary);
     }
+
 
     .--brand {
         display: flex;
@@ -299,35 +342,18 @@
         }
     }
 
-    ~ .app-target-forecast__anal-card {
-        margin-top: 4px;
-    }
 
-    .--idea-corner {
-        pointer-events: none;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        overflow: hidden;
-        border-radius: inherit;
-
-        &:before {
+    &.disabled {
+        background-color: white;
+        &:after {
             content: "";
             position: absolute;
-            width: 120%;
-            height: 120%;
-            background: white;
-            display: block;
-            transform: rotate(45deg) translateX(25px);
-            border: 1px solid var(--cl-border);
-        }
-
-        svg {
-            position: absolute;
-            right: 8px;
-            bottom: 8px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: inherit;
         }
     }
 

@@ -226,6 +226,7 @@ html.ovhidden body {
     .app-link {
         font-size: 13px;
         padding: 0.55rem .75rem;
+        white-space: nowrap;
 
         &:hover {
             background-color: var(--bg-secondary);
