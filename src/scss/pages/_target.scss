@@ -243,14 +243,17 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        color: var(--cl-yellow);
 
         &:hover {
-            background: var(--bg-secondary);
+            color: var(--cl-text);
+            border-color: #ffd160;
+            background-color: #ffd160;
         }
 
         svg {
             position: absolute;
-            margin-left: 5px;
+            margin-left: 3px;
             transform: rotate(-45deg);
         }
     }
@@ -345,15 +348,8 @@
 
     &.disabled {
         background-color: white;
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: inherit;
+        .cell:not(.last) {
+            opacity: 0.3;
         }
     }
 
@@ -378,11 +374,21 @@
 
     @include mq-min(md) {
         grid-template-columns: 1fr minmax(300px, 1fr);
+
+
+        .--left {
+            .app-dropdown-menu.--pos-right {
+                right: auto;
+                left: -10px;
+            }
+        }
     }
 
     .--left {
         container-name: forecast-left;
         container-type: inline-size;
+        position: relative;
+        z-index: 1;
     }
     .--right {
         container-name: forecast-right;
